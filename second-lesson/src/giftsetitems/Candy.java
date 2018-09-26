@@ -28,7 +28,8 @@ public class Candy extends Sweet {
         this.hasSack = hasSack;
     }
 
-
-
-
+    @Override
+    public String toString() {
+        return super.toString() + " , Is candy has a sack: " + this.isHasSack();
+    }
 }

@@ -30,4 +30,9 @@ public class Lollipop extends Sweet implements Suckable {
     public void toSuck() {
         System.out.println("yum-yum!");
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + " , Length of wand: " + this.getLengthOfWand();
+    }
 }

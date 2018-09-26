@@ -35,15 +35,15 @@ public class MakeGiftSetForEnteredParams {
 
     }
 
-    public static void printSweetsInTheGift(ArrayList<Sweet> sweetsInTheGift) {
+    private static void printSweetsInTheGift(ArrayList<Sweet> sweetsInTheGift) {
         for (Sweet sweet: sweetsInTheGift){
             System.out.println(sweet.getClass().getSimpleName() + ":");
-            System.out.println("Name: " +  sweet.getName() + " , Price: " + sweet.getPrice() + " , Weight: " + sweet.getWeight());
+            System.out.println(sweet.toString());
             System.out.println();
         }
     }
 
-    public static int calculateTotalWeightOfSweets(ArrayList<Sweet> sweetsInTheGift){
+    private static int calculateTotalWeightOfSweets(ArrayList<Sweet> sweetsInTheGift){
         int totalWeight = 0;
         for (Sweet sweet: sweetsInTheGift){
             totalWeight += sweet.getWeight();
@@ -51,7 +51,7 @@ public class MakeGiftSetForEnteredParams {
         return totalWeight;
     }
 
-    public static double calculateTotalPriceOfSweets(ArrayList<Sweet> sweetsInTheGift){
+    private static double calculateTotalPriceOfSweets(ArrayList<Sweet> sweetsInTheGift){
         double totalPrice = 0;
         for (Sweet sweet: sweetsInTheGift){
             totalPrice += sweet.getPrice();
@@ -59,7 +59,7 @@ public class MakeGiftSetForEnteredParams {
         return totalPrice;
     }
 
-    public static ArrayList<Lollipop> getLollipopsForTheGift() throws IOException {
+    private static ArrayList<Lollipop> getLollipopsForTheGift() throws IOException {
         ArrayList<Lollipop> lollipops = new ArrayList<>();
         System.out.print("Enter the number of lollipops in the gift: ");
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
@@ -83,7 +83,7 @@ public class MakeGiftSetForEnteredParams {
         return lollipops;
     }
 
-    public static ArrayList<Candy> getCandiesForTheGift() throws IOException {
+    private static ArrayList<Candy> getCandiesForTheGift() throws IOException {
         ArrayList<Candy> candies = new ArrayList<>();
         System.out.print("Enter the number of candies in the gift: ");
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
@@ -107,7 +107,7 @@ public class MakeGiftSetForEnteredParams {
         return candies;
     }
 
-    public static ArrayList<Jellybean> getJellybeansForTheGift() throws IOException {
+    private static ArrayList<Jellybean> getJellybeansForTheGift() throws IOException {
         ArrayList<Jellybean> jellybeans = new ArrayList<>();
         System.out.print("Enter the number of jellybeans in the gift: ");
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));

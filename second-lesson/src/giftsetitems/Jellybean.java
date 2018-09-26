@@ -19,4 +19,9 @@ public class Jellybean extends Sweet {
     public void setNameOfFruitMadeFrom(String nameOfFruitMadeFrom) {
         this.nameOfFruitMadeFrom = nameOfFruitMadeFrom;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + " , Name of fruit made from: " + this.getNameOfFruitMadeFrom();
+    }
 }

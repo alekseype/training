@@ -6,30 +6,30 @@ import giftsetitems.Lollipop;
 import java.util.ArrayList;
 
 public class MakeDefaultGift {
-    public static ArrayList<Sweet> sweetsInDefaultGift = new ArrayList<>();
-    public static int weightOfTheGift;
-    public static double priceOfTheGift;
+    private static ArrayList<Sweet> sweetsInDefaultGift = new ArrayList<>();
+    private static int weightOfTheGift;
+    private static double priceOfTheGift;
 
-    public static void addSweetsToTheGift(){
+    private static void addSweetsToTheGift(){
         sweetsInDefaultGift.add(new Lollipop("Nice lollipop #1",23,32.00,7));
         sweetsInDefaultGift.add(new Candy("Candy #1",34, 56.23));
         sweetsInDefaultGift.add(new Jellybean("Jellybean #1",11,21.3,"Cherry"));
         sweetsInDefaultGift.add(new Jellybean("Jellybean #2",16,26.1,"Raspberry"));
     }
 
-    public static void printSweetsInTheGift() {
+    private static void printSweetsInTheGift() {
         System.out.println("Sweets in the gift set: ");
         System.out.println("Total weight = " + weightOfTheGift);
         System.out.println("Total price = " + priceOfTheGift);
         System.out.println();
         for (Sweet sweet: sweetsInDefaultGift){
             System.out.println(sweet.getClass().getSimpleName() + ":");
-            System.out.println("Name: " +  sweet.getName() + " , Price: " + sweet.getPrice() + " , Weight: " + sweet.getWeight());
+            System.out.println(sweet.toString());
             System.out.println();
         }
     }
 
-    public static int calculateTotalWeightOfSweets(){
+    private static int calculateTotalWeightOfSweets(){
         int totalWeight = 0;
         for (Sweet sweet: sweetsInDefaultGift){
             totalWeight += sweet.getWeight();
@@ -37,7 +37,7 @@ public class MakeDefaultGift {
         return totalWeight;
     }
 
-    public static double calculateTotalPriceOfSweets(){
+    private static double calculateTotalPriceOfSweets(){
         double totalPrice = 0;
         for (Sweet sweet: sweetsInDefaultGift){
             totalPrice += sweet.getPrice();

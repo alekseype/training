@@ -39,4 +39,9 @@ public abstract class Sweet implements Eatable {
     public void toEat() {
         System.out.println("Munch! Crunch! general.Sweet!");
     }
+
+    @Override
+    public String toString(){
+         return "Name: " +  this.getName() + " , Price: " + this.getPrice() + " , Weight: " + this.getWeight();
+    }
 }
